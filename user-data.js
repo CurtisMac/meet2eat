@@ -17,6 +17,7 @@ const userDb = [
             currentLocation: {
                 lat: 49.2850486,
                 long: -123.1169118,
+                locName: 'Brainstation'
             }
         }
     },
@@ -36,6 +37,7 @@ const userDb = [
             currentLocation: {
                 lat: 49.2850486,
                 long: -123.1169118,
+                locName: 'Brainstation'
             }
         }
     },
@@ -55,6 +57,7 @@ const userDb = [
             currentLocation: {
                 lat: 49.2850486,
                 long: -123.1169118,
+                locName: 'Brainstation'
             }
         }
     },
@@ -74,6 +77,7 @@ const userDb = [
             currentLocation: {
                 lat: 49.2850486,
                 long: -123.1169118,
+                locName: 'Brainstation'
             }
         }
     }
@@ -109,11 +113,16 @@ for (let i = 0; i < 3; i++) {
             currentLocation: {
                 lat: 0,
                 long: 0,
+                locName: 'Brainstation'
             }
         }
     });
 }
 
-console.log(userDb);
+// const updateDB = (data)=>{
+//     console.log(data)
+// }
 
 module.exports = userDb
+
+

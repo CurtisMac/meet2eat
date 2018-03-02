@@ -1,13 +1,15 @@
 const express = require('express')
 const loginRouter = express.Router()
 const userDb = require('../user-data')
+//To use, post key 'username' with value
+//our usernames are our first names, all lowercase
 
-loginRouter.get('/login/:username', (req, res) => {
-    let {username} = req.params
-    let userData = userDb.filter((obj)=>{
+loginRouter.post('/login', (req, res) => {
+    let {username}  = req.body
+    let userData = userDb.find((obj) => {
         return obj.username===username
     })
-    res.json(userData)
+    res.send(userData.info)
 })
 
 module.exports = loginRouter

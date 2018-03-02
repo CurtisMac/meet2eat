@@ -1,14 +1,19 @@
 const express = require('express')
 const createRouter = express.Router()
+const userDb = require('../user-data')
+const getRestaurants = require('../functions/restaurantAPI')
 
-createRouter.get('/create', (req, res) => {
-    res.send('create a meetup!')
+createRouter.post('/create', (req, res) => {
+    let {id} = req.body
+    let userData = userDb.find((obj) => {
+        return obj.username === 'curtis'
+    })
+    // let lat = userData.info.currentLocation.lat
+    // let long = userData.info.currentLocation.long
+    // getRestaurants(lat, long, (restaurantData) => {
+    //     res.json(restaurantData)
+    // })
+    res.send(userData)
 })
 
-// app.get('/create', (req, res) => {
-//     let { username } = req.params
-//     console.log(username)
-//     res.send(username)
-// })
-
-module.exports = createRouter
+module.exports = createRouter 

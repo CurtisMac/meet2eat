@@ -1,8 +1,13 @@
 const express = require('express')
 const router = express.Router()
+const updateDB = require('../user-data')
+const getRestaurants = require('../functions/restaurantAPI')
 
-router.get('/', (req, res) => {
-   res.send('hi')
+router.post('/', (req, res) => {
+    let {lat, long} = req.body
+    getRestaurants(lat, long, (restaurantData)=>{
+        res.json(restaurantData)
+    })
 })
 
 module.exports = router

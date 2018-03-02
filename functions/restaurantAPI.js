@@ -1,10 +1,12 @@
 const axios = require('axios')
+const api = require ('../keys.js')
 
 getRestaurants = (lat, long, callback) => {
+    console.log(api)
     axios({
         method: 'post',
         url: `https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`,
-        headers: { 'user-key': 'fe09603b36f7542ee934666f0731649a' }
+        headers: { 'user-key': api }
     })
         .then(function (response) {
             console.log('i called api')

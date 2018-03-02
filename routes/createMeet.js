@@ -10,11 +10,13 @@ createRouter.get('/create', (req, res) => {
     res.send('create a meetup!')
 })
 
-createRouter.post('/create', (req, res) => {
+createRouter.post('/create', (req, res, body) => {
     let { id } = req.body
-
-    console.log(req.body)
-    res.json(id)
+    let test = userDb.find((obj) => {
+        return obj.info.id === id
+    })
+    console.log(test.info)
+    res.json(test.info)
 })
 
 // let data = {

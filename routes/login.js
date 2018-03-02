@@ -22,12 +22,12 @@ loginRouter.post('/login', (req, res) => {
     let {username}  = req.body
 
     let userData = userDb.find((obj) => {
- 
         return obj.username===username
     })
 
     
-    res.send(userData)
+    
+    res.send(userData.info)
 })
 
 

@@ -5,7 +5,7 @@ const userDb = [
         username: 'sandra',
         password: 'abc123',
         info: {
-            photo: "",
+            photo: "/profile_photo.jpeg",
             id: 0001,
             name: 'Sandra',
             age: '',
@@ -25,7 +25,7 @@ const userDb = [
         username: 'eduardo',
         password: 'abc123',
         info: {
-            photo: "",
+            photo: "ed_profile.jpg",
             id: 0002,
             name: 'Ed Silva',
             age: '',
@@ -45,7 +45,7 @@ const userDb = [
         username: 'curtis',
         password: 'abc123',
         info: {
-            photo: "",
+            photo: "smiley.jpg",
             id: 0003,
             name: 'Curtis Mac',
             age: '',
@@ -65,7 +65,7 @@ const userDb = [
         username: 'andrew',
         password: 'abc123',
         info: {
-            photo: "",
+            photo: "andrew_profile.jpg",
             id: 0004,
             name: 'Andrew Sordier',
             age: '',

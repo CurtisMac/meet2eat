@@ -119,9 +119,6 @@ for (let i = 0; i < 3; i++) {
     });
 }
 
-// const updateDB = (data)=>{
-//     console.log(data)
-// }
 
 module.exports = userDb
 

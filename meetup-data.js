@@ -5,7 +5,7 @@ const meetups = [
         address: '001 Granville St.',
         start: '12:30',
         end: '2:00',
-        username: 0001,
+        username: 'curtis',
         id: 'm180302_1'
     },
     {
@@ -13,7 +13,7 @@ const meetups = [
         address: '002 Granville St.',
         start: '12:00',
         end: '1:30',
-        username: 0002,
+        username: 'sandra',
         id: 'm180303_2'
     },
     {
@@ -21,25 +21,23 @@ const meetups = [
         address: '003 Robson St.',
         start: '1:00',
         end: '2:00',
-        username: 0003,
+        username: 'eduardo',
         id: 'm180304_3'
     }
 ]
 
 addMeetup = (restaurant, address, start, end, username, id) => {
-    let newMeetup = {
-        restaurant: restaurant,
-        address: address,
-        start: start,
-        end: end,
-        username: username,
-        id: id
-    }
-    return meetups.concat(newMeetup)
+  return meetups.push(
+      {   restaurant,
+          address,
+          start,
+          end,
+          username,
+          id
+      }
+  )
 }
-console.log(addMeetup("test restaurante 1", "123 test", "12pm", '1pm', 'ed', '000'))
-
-
+ 
 
 module.exports = {addMeetup, meetups}
 

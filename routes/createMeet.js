@@ -7,7 +7,7 @@ const meetups = require('../meetup-data')
 createRouter.post('/create', (req, res) => {
     let {restaurant, address, start, end, username, id} = req.body
     meetups.addMeetup(restaurant, address, start, end, username, id)
-    res.send('success')
+    res.send(meetups)
 })
 
 module.exports = createRouter 

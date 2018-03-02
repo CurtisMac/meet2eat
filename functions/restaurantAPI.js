@@ -7,7 +7,7 @@ getRestaurants = (lat, long, callback) => {
         headers: { 'user-key': 'fe09603b36f7542ee934666f0731649a' }
     })
         .then(function (response) {
-            console.log(response.data.nearby_restaurants)
+            console.log('i called api')
             callback(response.data.nearby_restaurants)
         })
         .catch(function (err) {

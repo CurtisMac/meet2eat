@@ -8,6 +8,7 @@ const signupRouter = require('./routes/signup')
 const joinRouter = require('./routes/joinMeet')
 const createRouter = require('./routes/createMeet')
 const restaurant = require('./functions/restaurantAPI')
+const getMeetupsRouter = require('./routes/getMeetups')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -25,6 +26,7 @@ app.use('/', loginRouter)
 app.use('/', signupRouter)
 app.use('/', joinRouter)
 app.use('/', createRouter)
+app.use('/', getMeetupsRouter)
 
 // app.get('/restaurants', (req, res) => {
 //     restaurant((response) => {

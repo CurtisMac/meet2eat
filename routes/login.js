@@ -8,7 +8,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json())
+loginRouter.use(bodyParser.json())
 
 // loginRouter.get('/login/:username', (req, res) => {
 //     let {username} = req.params
@@ -20,9 +20,13 @@ app.use(bodyParser.json())
 
 loginRouter.post('/login', (req, res) => {
     let {username}  = req.body
-    let userData = userDb.filter((obj) => {
+
+    let userData = userDb.find((obj) => {
+ 
         return obj.username===username
     })
+
+    
     res.send(userData)
 })
 

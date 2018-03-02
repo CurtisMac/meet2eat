@@ -7,7 +7,7 @@ const apiData = require('../api.js')
 router.post('/', (req, res) => {
     let {lat, long} = req.body
     getRestaurants(lat, long, (restaurantData)=>{
-        res.json(apiData[0])
+        res.json(apiData)
     })
 })
 

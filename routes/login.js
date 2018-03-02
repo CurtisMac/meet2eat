@@ -19,9 +19,11 @@ app.use(bodyParser.json())
 // })
 
 loginRouter.post('/login', (req, res) => {
-    // let username  = req.body.username
-    console.log(req.body)
-    res.send(req.body)
+    let {username}  = req.body
+    let userData = userDb.filter((obj) => {
+        return obj.username===username
+    })
+    res.send(userData)
 })
 
 

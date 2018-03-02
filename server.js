@@ -1,12 +1,16 @@
 const express = require('express')
 const app = express()
 const port = process.argv[2] || 8080
+const bodyParser = require('body-parser')
 const router = require('./routes/router')
 const loginRouter = require('./routes/login')
 const signupRouter = require('./routes/signup')
 const joinRouter = require('./routes/joinMeet')
 const createRouter = require('./routes/createMeet')
 const restaurant = require('./functions/restaurantAPI')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.use('/', router)
 app.use('/', loginRouter)

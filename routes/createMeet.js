@@ -4,9 +4,10 @@ const userDb = require('../user-data')
 const getRestaurants = require('../functions/restaurantAPI')
 
 createRouter.post('/create', (req, res) => {
-    let {id} = req.body
+    let {username} = req.body
     let userData = userDb.find((obj) => {
-        return obj.username === 'curtis'
+        //Getting random whitespace, hacked to get it working, to be fixed in the future
+        return obj.username.replace(/\s/g, '') === username.replace(/\s/g, '')
     })
     // let lat = userData.info.currentLocation.lat
     // let long = userData.info.currentLocation.long

@@ -4,7 +4,7 @@ getRestaurants = (lat, long, callback) => {
     axios({
         method: 'post',
         url: `https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`,
-        headers: { 'user-key': 'e8bb510b6bf9e4d7930830a4c9c3ba5e' }
+        headers: { 'user-key': 'fe09603b36f7542ee934666f0731649a' }
     })
         .then(function (response) {
             console.log(response.data.nearby_restaurants)

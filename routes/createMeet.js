@@ -9,12 +9,11 @@ createRouter.post('/create', (req, res) => {
         //Getting random whitespace, hacked to get it working, to be fixed in the future
         return obj.username.replace(/\s/g, '') === username.replace(/\s/g, '')
     })
-    // let lat = userData.info.currentLocation.lat
-    // let long = userData.info.currentLocation.long
-    // getRestaurants(lat, long, (restaurantData) => {
-    //     res.json(restaurantData)
-    // })
-    res.send(userData)
+    let lat = userData.info.currentLocation.lat
+    let long = userData.info.currentLocation.long
+    getRestaurants(lat, long, (restaurantData) => {
+        res.json(restaurantData)
+    })
 })
 
 module.exports = createRouter 

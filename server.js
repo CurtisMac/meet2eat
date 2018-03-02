@@ -28,12 +28,6 @@ app.use('/', joinRouter)
 app.use('/', createRouter)
 app.use('/', getMeetupsRouter)
 
-// app.get('/restaurants', (req, res) => {
-//     restaurant((response) => {
-//         res.json(response)
-//     })
-// })
-
 app.listen(port, (req, res) => {
     console.log(`Listening on port ${port}`)
 })

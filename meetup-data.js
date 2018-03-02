@@ -41,5 +41,5 @@ console.log(addMeetup("test restaurante 1", "123 test", "12pm", '1pm', 'ed', '00
 
 
 
-module.exports = meetups
+module.exports = {addMeetup, meetups}
 

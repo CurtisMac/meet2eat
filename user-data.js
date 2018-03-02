@@ -115,6 +115,5 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(userDb);
-// console.log(userDb[0].info.sex)
 
 module.exports = userDb

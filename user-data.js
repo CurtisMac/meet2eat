@@ -114,7 +114,16 @@ for (let i = 0; i < 3; i++) {
     });
 }
 
-console.log(userDb);
-// console.log(userDb[0].info.sex)
+// const updateDB = (data)=>{
+//     console.log(data)
+// }
 
+// module.exports = userDb
+
+// exports.updateDB = updateDB;
+// // module.exports = userDb
+// module.exports={
+// updateDB:updateDB
+// }
 module.exports = userDb
+

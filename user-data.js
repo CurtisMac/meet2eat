@@ -5,7 +5,7 @@ const userDb = [
         username: 'sandra',
         password: 'abc123',
         info: {
-            photo: "",
+            photo: "/profile_photo.jpeg",
             id: 0001,
             name: 'Sandra',
             age: '',

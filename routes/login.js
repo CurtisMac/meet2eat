@@ -1,16 +1,13 @@
 const express = require('express')
 const loginRouter = express.Router()
+const userDb = require('../user-data')
 
 loginRouter.get('/login/:username', (req, res) => {
     let {username} = req.params
-    res.json(username)
+    let userData = userDb.filter((obj)=>{
+        return obj.username===username
+    })
+    res.json(userData)
 })
 
-
-// app.get('/login/:username', (req, res)=>{
-//     let {username} = req.params
-//     let userData = 
-//     console.log(username)
-//     res.json(username)
-// })
 module.exports = loginRouter

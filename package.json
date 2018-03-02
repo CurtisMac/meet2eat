@@ -1,0 +1,29 @@
+{
+  "name": "m2e_backend",
+  "version": "1.0.0",
+  "description": "meet2eat",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurtisMac/meet2eat_backend.git"
+  },
+  "keywords": [
+    "meet2eat"
+  ],
+  "author": "The Unicorn Hub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CurtisMac/meet2eat_backend/issues"
+  },
+  "homepage": "https://github.com/CurtisMac/meet2eat_backend#readme"
+}

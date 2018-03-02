@@ -4,7 +4,7 @@ module.exports = function (callback) {
     axios({
         method: 'get',
         url: 'https://developers.zomato.com/api/v2.1/geocode?lat=49.285049&lon=-123.114723',
-        headers: { 'user-key': 'put key here' }
+        headers: { 'user-key': 'put key here ' }
     })
         .then(function (response) {
             console.log(response.data.nearby_restaurants)

@@ -4,7 +4,7 @@ const meetups = require('../meetup-data')
 
 getMeetupsRouter.post('/meetups', (req, res) => {
   let {username} = req.body
-  res.send(meetups) 
+  res.send(meetups.meetups[0]) 
 })
 
 module.exports = getMeetupsRouter
